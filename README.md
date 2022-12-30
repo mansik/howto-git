@@ -13,22 +13,25 @@
 * git 사용 방법 1 
   * git 사용 방법 정리
 * git 사용 방법 2 
+* git branch 다루기
+* git 원격 저장소 다루기 
+
 
 # git 용어
 * working directory : 현재 작업 directory, 소스가 있는 폴더
 * staging area :  일반적으로 Git 디렉터리에 포함된 파일로, 다음 커밋에 포함될 항목에 대한 정보를 저장합니다. index라고도 함.
 * repogitory :git directory(저장소) : 소스의 변경사항 히스토리가 저장되는 장소
-* branch : 
+* branch(브런치) : 
 
 # git 구조, 개념
 * `working directory` - `staging area` - `git directory`  -> `github`
 *                        (cached/staged)- (repository)  
-*  untracked, tracked  
+*  untracked, tracked  기
 *(tracked : git add 한 파일은 git에서 관리되는 파일)
 
 *             <------------------------------------------- clone : 원격저장소에서 복사해서 새로운 디렉토리로 가져오기    
 *                     add ->        commit ->       push ->       : 작업파일들을 원격저장소로 올리기
-*             <------------------------------------------- pull   : 원격저장소의 것을 가져오기
+*             <------------------------------------------- pull   : 원격저장소의 것을 가져오기 + 병합하기
 
 ## github에 git push 할 경우 아래과 같은 오류 발생시 처리
 * remote: Support for password authentication was removed on August 13, 2021.  
@@ -85,12 +88,12 @@
 
  31  git rm --cached encoding.ipynb  # staging area에서 해당 파일 삭제, (-r : 하위디렉터리 까지 삭제)
  38  git status -s # 간략히 보기(-s : short)
- 39  git diff # working directory 에서 추적(tracked)인 파일의 변경사항 확인
- 40  git diff -staged # staging area의 변경사항 확인
+ 39  git diff # working directory 에서 추적(tracked)인 파일의 변경사항 보기
+ 40  git diff -staged # staging area의 변경사항 보기
  49  git commit -m "1-4 작업" # staging area의 파일을 git directory 로 이동, message의 내용으로 저장. (*필수*)
- 50  git log # commit 한 히스토리 확인
+ 50  git log # commit 한 히스토리 보기
  56  git commit  -h
- 64  git remote add origin https://github.com/mansik/python_project_20221226.git # 현재 repogitory 에 원격 repogitory 추가 (*필수*)
+ 64  git remote add origin https://github.com/mansik/python_project_20221226.git # 현재 프로젝트에 원격 repogitory 추가 (*필수*)
  65  git remote # 원격 저장소 명칭 보기 (origin)
  66  git remote -v # 원격 저장소 세부 보기
  67  git push -u origin master # origin(저장소), master(브런치), -u(git push 시 -u 옵션을 사용하면 이후에서 git push 시 origin, master 을 입력하지 않아도 된다.) (*필수*)
@@ -127,8 +130,8 @@
    36  ls -al
    37  open .gitignore 
    38  git status -s # 간략히 보기(-s : short)
-   39  git diff # working directory 에서 추적(tracked)인 파일의 변경사항 확인
-   40  git diff -staged # staging area의 변경사항 확인
+   39  git diff # working directory 에서 추적(tracked)인 파일의 변경사항 보기
+   40  git diff -staged # staging area의 변경사항 보기
    42  git diff --cashed # cashed = staged 동일
    44  git config --global -e
    # .gitcofig 파일에 아래 내용 추가  (difftool 로 code를 셋팅, code = visual studio code)
@@ -139,7 +142,7 @@
    46  git difftool # working directory에서 추적되고 있는 파일(tracked)에서 변경사항이 있으면 vscode가 열림.
    47  git difftool --staged   # staging area 의 파일의 변경사항이 있으면 vscode가 열림.
    49  git commit -m "1-4 작업" # staging area의 파일을 git directory 로 이동, message의 내용으로 저장. (*필수*)
-   50  git log # commit 한 히스토리 확인
+   50  git log # commit 한 히스토리 보기
    51  git status
    52  echo "#(책) Do It! 파이썬 생활프로그래밍 소스" > README.md
    53  git status -s
@@ -149,7 +152,7 @@
    61  git add . # working directory 의 모든 파일을 staging area 로 이동
    62  git commit  -m "add readme.md and .gitignore" # commit message와 함께 commit
    63  git status -s
-   64  git remote add origin https://github.com/mansik/python_project_20221226.git # 현재 repogitory 에 원격 repogitory 추가 (*필수*)
+   64  git remote add origin https://github.com/mansik/python_project_20221226.git # 현재 프로젝트에 원격 repogitory 추가 (*필수*)
    65  git remote # 원격 저장소 명칭 보기 (origin)
    66  git remote -v # 원격 저장소 세부 보기
    67  git push -u origin master # origin(저장소), master(브런치), -u(git push 시 -u 옵션을 사용하면 이후에서 git push 시 origin, master 을 입력하지 않아도 된다.) (*필수*)
@@ -188,4 +191,37 @@ cd my-test
 git add README.md
 git commit -m "first commit"
 git push origin master
+```
+
+# git branch 다루기 
+[브런치란 무엇인가](https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
+```
+git branch testing  # testing 이라는 새로운 브런치 생성
+git checkout testing  # 다른 브런치(testing)로 이동
+git log --oneline --decorate --graph --all  # 현재 브랜치가 가리키고 있는 히스토리가 무엇이고 어떻게 갈라져 나왔는지 보여준다.
+git checkout master
+```
+
+
+
+# git 원격저장소 다루기
+```
+> 많이 사용하는 명령어
+git pull origin master  # 원격저장소(origin)의 브런치(master)을 가져와서 병합한다. fetch + merge (*필수*)
+git remote -v  # 원격 저장소명칭과 url을 보기
+git remote show origin  # 원격 저장소의 URL과 추적하는 브랜치 보기
+```
+
+```
+git remote add origin https://github.com/mansik/python_project_20221226.git  # 현재 프로젝트에 원격 repogitory 추가 (*필수*), git remote add <단축이름> <url> 
+git pull origin master  # 원격저장소(origin)의 브런치(master)을 가져와서 병합한다. fetch + merge (*필수*)
+git remote remove origin  # 현재 프로젝트에서 원격 저장소 삭제
+git remote -v  # 원격 저장소명칭과 url을 보기 
+git remote add origin https://github.com/mansik/python_project_20221226.git
+
+git fetch origin  # 원격 저장소의 내용을 가져온다. working directory 에 적용하지는 않는다. 로컬에서 하던 작업을 정리하고 나서(commit등) 수동으로 Merge 해야 한다
+
+git remote show origin  # 원격 저장소의 URL과 추적하는 브랜치 보기
+git remote rename origin paul  # 리모트 저장소의 이름을 변경, origin -> paul 로 변경
+git remote  # 결과는 paul 을  보여줌
 ```
