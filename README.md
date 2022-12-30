@@ -1,5 +1,10 @@
 # howto-git
-# git 사용법
+
+* 참고사이트  
+> [git docs](https://git-scm.com/docs)  
+> [git book](https://git-scm.com/book/ko/v2)  
+> github : new repogitory 생성시 나타나는 가이드  
+
 #### 차례
 * git 용어
 * git 구조, 개념
