@@ -66,6 +66,7 @@
 >  , 로컬에 git 저장소를 만들고 나서 나중에 github에 올리는 경우  
 
 ```
+> 주로 사용하는 명령어
  35  echo .ipynb_checkpoints/ > .gitignore # .gitignore 파일에 git에 올리지 않는 파일 또는 디렉터리를 기록, git에 저장/추적 안됨
 
  14  git init # git 초기화, initialized empty repogitory (*필수*)
