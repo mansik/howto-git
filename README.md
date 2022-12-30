@@ -1,6 +1,6 @@
 # howto-git
 # git 사용법
-## 차례
+#### 차례
 * git 용어
 * git 구조, 개념
   * github에 git push 할 경우 아래과 같은 오류 발생시 처리
