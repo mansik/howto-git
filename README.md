@@ -21,7 +21,7 @@
 * working directory : 현재 작업 directory, 소스가 있는 폴더
 * staging area :  일반적으로 Git 디렉터리에 포함된 파일로, 다음 커밋에 포함될 항목에 대한 정보를 저장합니다. index라고도 함.
 * repogitory :git directory(저장소) : 소스의 변경사항 히스토리가 저장되는 장소
-* branch(브런치) : 
+* branch(브런치) : 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생긴다. 코드를 통째로 복사하고 나서 원래 코드와는 상관없이 독립적으로 개발을 진행할 수 있는데, 이렇게 독립적으로 개발하는 것이 브랜치다.
 
 # git 구조, 개념
 * `working directory` - `staging area` - `git directory`  -> `github`
@@ -191,15 +191,22 @@ cd my-test
 git add README.md
 git commit -m "first commit"
 git push origin master
+git commit --amend -m "첫번째 커밋" # 마지막 commit message 변경
+git push -f origin master  # 원격저장소에 강제로  push 
+
 ```
 
 # git branch 다루기 
 [브런치란 무엇인가](https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
 ```
 git branch testing  # testing 이라는 새로운 브런치 생성
-git checkout testing  # 다른 브런치(testing)로 이동
+git checkout iss53  # 다른 브런치(iss53)로 이동, 해당 브런치의 파일을 working directory로 복사
+echo "iss53 branch 에서 작업" > iss53.txt
+git commit -a -m 'finished the new footer [iss53]'
+.. iss53 브런치에서 작업 후 commit 후 
 git log --oneline --decorate --graph --all  # 현재 브랜치가 가리키고 있는 히스토리가 무엇이고 어떻게 갈라져 나왔는지 보여준다.
-git checkout master
+git checkout master  # master 브런치로 이동
+git merge iss53  # ss53 브랜치를 master 브랜치에 Merge(합친다) , 다른 브랜치를 현재 Checkout된 브랜치에 Merge 하는 명령이다.
 ```
 
 
