@@ -191,6 +191,8 @@ cd my-test
 git add README.md
 git commit -m "first commit"
 git push origin master
+
+# 마지막 commit message 변경
 git commit --amend -m "첫번째 커밋" # 마지막 commit message 변경
 git push -f origin master  # 원격저장소에 강제로  push 
 
