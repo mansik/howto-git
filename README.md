@@ -42,9 +42,12 @@
     * Contents  (Repository contents, commits, branches, downloads, releases, and merges.)  
 
 # git 설정
-* 6  git config --global user.name "ms"  # user.name setting, (*필수*)
-* 7  git config --global user.email "ms@gmail.com" # user.email setting, (*필수*)  
-* 10  git config --global core.autocrlf true # git 에 저장시 \r\n -> \n 으로 저장, (윈도우에서는 *필수*), 리눅스/맥은 해당 없음  
+```
+> 많이 사용하는 명령어
+6  git config --global user.name "ms"  # user.name setting, (*필수*)
+7  git config --global user.email "ms@gmail.com" # user.email setting, (*필수*)  
+10  git config --global core.autocrlf true # git 에 저장시 \r\n -> \n 으로 저장, (윈도우에서는 *필수*), 리눅스/맥은 해당 없음  
+```
 
 ```
  1  git config --list  # git config의 list  
@@ -66,7 +69,7 @@
 >  , 로컬에 git 저장소를 만들고 나서 나중에 github에 올리는 경우  
 
 ```
-> 주로 사용하는 명령어
+> 많이 사용하는 명령어
  35  echo .ipynb_checkpoints/ > .gitignore # .gitignore 파일에 git에 올리지 않는 파일 또는 디렉터리를 기록, git에 저장/추적 안됨
 
  14  git init # git 초기화, initialized empty repogitory (*필수*)
