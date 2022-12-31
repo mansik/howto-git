@@ -5,6 +5,11 @@
 > [git book](https://git-scm.com/book/ko/v2)  
 > github : new repogitory 생성시 나타나는 가이드  
 
+* 동영상
+> [드림코딩-깃,깃허브 제대로 배우기](https://www.youtube.com/watch?v=Z9dvM7qgN9s&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=2&t=2511s)  
+> [코딩알려주는 누나](https://www.youtube.com/watch?v=lelVripbt2M&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=3)  
+
+
 #### 차례
 * git 용어
 * git 구조, 개념
