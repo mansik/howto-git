@@ -13,7 +13,7 @@
 #### 차례
 * git 용어
 * git 구조, 개념
-  * github에 git push 할 경우 아래과 같은 오류 발생시 처리
+  * github에 git push 할 경우 Authentication failed 오류 발생시 처리
 * git 설정
 * git 사용 방법 1 
   * git 사용 방법 정리
@@ -22,23 +22,22 @@
 * git 원격 저장소 다루기 
 
 
-# git 용어ㄹ
+# git 용어
 * working directory : 현재 작업 directory, 소스가 있는 폴더
-* staging area :  일반적으로 Git 디렉터리에 포함된 파일로, 다음 커밋에 포함될 항목에 대한 정보를 저장합니다. index라고도 함.억
+* staging area :  일반적으로 Git 디렉터리에 포함된 파일로, 다음 커밋에 포함될 항목에 대한 정보를 저장합니다. index라고도 함.
 * repogitory :git directory(저장소) : 소스의 변경사항 히스토리가 저장되는 장소
 * branch(브런치) : 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생긴다. 코드를 통째로 복사하고 나서 원래 코드와는 상관없이 독립적으로 개발을 진행할 수 있는데, 이렇게 독립적으로 개발하는 것이 브랜치다.
 
 # git 구조, 개념
-* `working directory` - `staging area` - `git directory`  -> `github`
-*                        (cached/staged)- (repository)  
-*  untracked, tracked
-*(tracked : git add 한 파일은 git에서 추적 관리)
-
+* `-----------------------------로컬-----------------------|---원격`
+* `working directory`  --- `staging area`  --- `git directory`  --- `github`
+* (untracked/tracked ) --- (cached/staged) --- (repository)                        
+  * *(tracked : git add 한 파일은 git에서 추적 관리)*
 *             <------------------------------------------- clone : 원격저장소에서 복사해서 새로운 디렉토리로 가져오기    
 *                     add ->        commit ->       push ->       : 작업파일들을 원격저장소로 올리기
 *             <------------------------------------------- pull   : 원격저장소의 것을 가져오기 + 병합하기
 
-## github에 git push 할 경우 아래과 같은 오류 발생시 처리
+## github에 git push 할 경우 Authentication failed 오류 발생시 처리
 * remote: Support for password authentication was removed on August 13, 2021.  
 * remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently # # recommended modes of authentication.   
 * fatal: Authentication failed for 'https://github.com/mansik/python_project_20221226.git/'  
@@ -55,7 +54,7 @@
   * Repository permissions  
     * Contents  (Repository contents, commits, branches, downloads, releases, and merges.)  
 
-# git 설정
+# git config 설정
 ```
 > 많이 사용하는 명령어
 6  git config --global user.name "ms"  # user.name setting, (*필수*)
@@ -219,8 +218,6 @@ git checkout master  # master 브런치로 이동
 git merge iss53  # ss53 브랜치를 master 브랜치에 Merge(합친다) , 다른 브랜치를 현재 Checkout된 브랜치에 Merge 하는 명령이다.
 git checkout -b newbranch  # newbranch 를 만들고 checkout 까지 한번에 함.(*자주사용하는 명령어*)
 ```
-
-
 
 # git 원격저장소 다루기
 ```
