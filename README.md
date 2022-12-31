@@ -1,4 +1,4 @@
-# howto-git
+# howto-git-github
 
 * 참고사이트  
 > [git docs](https://git-scm.com/docs)  
