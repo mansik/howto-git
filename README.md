@@ -9,6 +9,8 @@
 > [드림코딩-깃,깃허브 제대로 배우기](https://www.youtube.com/watch?v=Z9dvM7qgN9s&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=2&t=2511s)  
 > [코딩알려주는 누나](https://www.youtube.com/watch?v=lelVripbt2M&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=3)  
 
+* git GUI for windows/mac
+> [sourcetree](https://www.sourcetreeapp.com/)
 
 #### 차례
 * git 용어
@@ -46,7 +48,7 @@
 > https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token 을 따라 작업(아래 설정 참고)
 
 ### github Personal Access Token 설정  
-* 위치 :  Settings\Developer settings\Personal access tokens\Fine-grained
+* 위치 :  github/Settings/Developer settings/Personal access tokens/Fine-grained
 > 다음 항목 read and write  
 * Repository access  
   * All repositories 또는 다른 옵션 선택
