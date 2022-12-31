@@ -31,8 +31,8 @@
 # git 구조, 개념
 * `working directory` - `staging area` - `git directory`  -> `github`
 *                        (cached/staged)- (repository)  
-*  untracked, tracked  기
-*(tracked : git add 한 파일은 git에서 관리되는 파일)
+*  untracked, tracked
+*(tracked : git add 한 파일은 git에서 추적 관리)
 
 *             <------------------------------------------- clone : 원격저장소에서 복사해서 새로운 디렉토리로 가져오기    
 *                     add ->        commit ->       push ->       : 작업파일들을 원격저장소로 올리기
@@ -47,9 +47,10 @@
 > https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token 을 따라 작업(아래 설정 참고)
 
 ### github Personal Access Token 설정  
+* 위치 :  Settings\Developer settings\Personal access tokens\Fine-grained
 > 다음 항목 read and write  
 * Repository access  
-  * All repositories  
+  * All repositories 또는 다른 옵션 선택
 * Permission  
   * Repository permissions  
     * Contents  (Repository contents, commits, branches, downloads, releases, and merges.)  
