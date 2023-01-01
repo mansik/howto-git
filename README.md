@@ -3,7 +3,7 @@
 #### 참고사이트  
 
 > [git docs](https://git-scm.com/docs)  
-> [git book](https://git-scm.com/book/ko/v2)  
+> [git book : 필수로 읽어야 함](https://git-scm.com/book/ko/v2)  
 > github : new repogitory 생성시 나타나는 가이드  참고  
 
 #### 동영상
