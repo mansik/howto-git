@@ -1,21 +1,27 @@
 # howto-git-github
 
 * 참고사이트  
+
 > [git docs](https://git-scm.com/docs)  
 > [git book](https://git-scm.com/book/ko/v2)  
 > github : new repogitory 생성시 나타나는 가이드  참고  
 
 * 동영상
+
 > [드림코딩-깃,깃허브 제대로 배우기](https://www.youtube.com/watch?v=Z9dvM7qgN9s&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=2&t=2511s)  
 > [코딩알려주는 누나](https://www.youtube.com/watch?v=lelVripbt2M&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=3)  
 
 * git GUI for windows/mac
+
 > [sourcetree](https://www.sourcetreeapp.com/)
 
 * 실습 사이트
+
 > [githowto, 예제 및 차례대로 해 볼 수 있음](https://githowto.com/)  
 
+
 #### 차례
+
 * git 용어
 * git 구조, 개념
   * github에 git push 할 경우 Authentication failed 오류 발생시 처리
@@ -28,12 +34,15 @@
 
 
 # git 용어
+
 * working directory : 현재 작업 directory, 소스가 있는 폴더
 * staging area :  일반적으로 Git 디렉터리에 포함된 파일로, 다음 커밋에 포함될 항목에 대한 정보를 저장합니다. index라고도 함.
 * repogitory :git directory(저장소) : 소스의 변경사항 히스토리가 저장되는 장소
 * branch(브런치) : 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생긴다. 코드를 통째로 복사하고 나서 원래 코드와는 상관없이 독립적으로 개발을 진행할 수 있는데, 이렇게 독립적으로 개발하는 것이 브랜치다.
 
+
 # git 구조, 개념
+
 * `-----------------------------로컬-----------------------|---원격`
 * `working directory`  --- `staging area`  --- `git directory`  --- `github`
 * (untracked/tracked ) --- (cached/staged) --- (repository)                        
@@ -42,7 +51,9 @@
 *                     add ->        commit ->       push ->       : 작업파일들을 원격저장소로 올리기
 *             <------------------------------------------- pull   : 원격저장소의 것을 가져오기 + 병합하기
 
+
 ## github에 git push 할 경우 Authentication failed 오류 발생시 처리
+
 * remote: Support for password authentication was removed on August 13, 2021.  
 * remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently # # recommended modes of authentication.   
 * fatal: Authentication failed for 'https://github.com/mansik/python_project_20221226.git/'  
@@ -50,18 +61,25 @@
 > github 에서 로그인 password를 사용하지 못하도록 해서 
 > https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token 을 따라 작업(아래 설정 참고)
 
+
 ### github Personal Access Token 설정  
+
 * 위치 :  github/Settings/Developer settings/Personal access tokens/Fine-grained
+
 > 다음 항목 read and write  
+
 * Repository access  
   * All repositories 또는 다른 옵션 선택
 * Permission  
   * Repository permissions  
     * Contents  (Repository contents, commits, branches, downloads, releases, and merges.)  
 
+
 # git config 설정
-```
+
 > 많이 사용하는 명령어
+
+```
 6  git config --global user.name "ms"  # user.name setting, (*필수*)
 7  git config --global user.email "ms@gmail.com" # user.email setting, (*필수*)  
 10  git config --global core.autocrlf true # git 에 저장시 crlf(\r\n) -> lf(\n) 으로 변환, (윈도우, *필수*)
@@ -85,11 +103,12 @@
 ```
 
 # git 사용 방법 1
+
 >  : 아직 버전관리를 하지 않는 로컬 디렉토리 하나를 선택해서 Git 저장소를 적용하는 방법  
 >  , 로컬에 git 저장소를 만들고 나서 나중에 github에 올리는 경우  
 
-```
 > 많이 사용하는 명령어
+```
  35  echo .ipynb_checkpoints/ > .gitignore # .gitignore 파일에 git에 올리지 않는 파일 또는 디렉터리를 기록, git에 저장/추적 안됨
 
  14  git init # git 초기화, initialized empty repogitory (*필수*)
@@ -113,6 +132,8 @@
  76  git commit -m "add file"
  77  git push  # 위에서 git push -u 를 사용했으므로 여기서는 생략해도 위에 설정된 저장소, 브런치로 push 된다.
 ```
+
+> 사용 예시
 
 ```
    13  cd /media/ms/My/Documents/python_project_20221226/ # 프로젝트 폴더로 이동
@@ -182,7 +203,9 @@
 ```
 
 ## git 사용 방법 정리
+
 > github에서 저장소를 새로 만들면 아래 가이드 라인이 나타난다.
+
 ```
 echo "# test" >> README.md
 git init
@@ -193,7 +216,9 @@ git push origin master
 ```
 
 # git 사용 방법 2 
+
 > : 기존 repogitory 를 clone해서 사용시, git init 할 필요 없음
+
 ```
 git clone https://github.com/mansik/test.git my-test # my-test 폴더로 원격저장소를 다운받아서 사용
 또는
@@ -204,14 +229,18 @@ git add README.md
 git commit -m "first commit"
 git push origin master
 
+
 # 마지막 commit message 변경
+
 git commit --amend -m "첫번째 커밋" # 마지막 commit message 변경
 git push -f origin master  # 원격저장소에 강제로  push 
 
 ```
 
 # git branch 다루기 
-[브런치란 무엇인가](https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
+
+> [브런치란 무엇인가](https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
+
 ```
 git branch testing  # testing 이라는 새로운 브런치 생성(*자주사용하는 명령어*)
 git checkout iss53  # 다른 브런치(iss53)로 이동, 해당 브런치의 파일을 working directory로 복사(*자주사용하는 명령어*)
@@ -225,12 +254,16 @@ git checkout -b newbranch  # newbranch 를 만들고 checkout 까지 한번에 �
 ```
 
 # git 원격저장소 다루기
-```
+
 > 많이 사용하는 명령어
+
+```
 git pull origin master  # 원격저장소(origin)의 브런치(master)을 가져와서 병합한다. fetch + merge (*자주사용하는 명령어*)
 git remote -v  # 원격 저장소명칭과 url을 보기
 git remote show origin  # 원격 저장소의 URL과 추적하는 브랜치 보기
 ```
+
+> 사용 예시
 
 ```
 git remote add origin https://github.com/mansik/python_project_20221226.git  # 현재 프로젝트에 원격 repogitory 추가 (*필수*), git remote add <단축이름> <url> 
