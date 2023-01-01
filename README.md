@@ -75,6 +75,25 @@
     * Contents  (Repository contents, commits, branches, downloads, releases, and merges.)  
 
 
+# git 도움말 보기
+
+```
+git help <verb>
+
+git help config  # config  명령어에 대한 도움말
+git add -h # add 명령어에 대한 간략 도움말(-h, --help)
+```
+
+# 상태를 확인 하기 위해 사용하는 명령어
+
+```
+# it status 명령어는 각 상태에 맞는 명령어 사용법도 보여주므로 참고 하면 된다.
+git status # show the working tree status
+
+# commit 후의 log 보기
+git log # show the commit logs
+```
+
 # git config 설정
 
 > 많이 사용하는 명령어
@@ -108,15 +127,16 @@
 >  , 로컬에 git 저장소를 만들고 나서 나중에 github에 올리는 경우  
 
 > 많이 사용하는 명령어
+
 ```
  35  echo .ipynb_checkpoints/ > .gitignore # .gitignore 파일에 git에 올리지 않는 파일 또는 디렉터리를 기록, git에 저장/추적 안됨
-
+ 
  14  git init # git 초기화, initialized empty repogitory (*필수*)
  18  rm -rf .git # .git 폴더를 지우면 git을 사용안하는 상태로 됨
- 20  git status # 현재 repogitory 의 상태 보기
+ 20  git status # working tree의 상태 보기
  19  git init
  25  git add . # working directory의 모든파일(.)을 staging area 에 추가, 이후 부터 working directory의 파일이 수정될 때마다 변경사항 추적됨(tracked) (*필수*)
-
+ 26  git status #  working tree의 상태 보기 (*자주사용하는 명령어*)
  31  git rm --cached encoding.ipynb  # staging area에서 해당 파일 삭제, (-r : 하위디렉터리 까지 삭제)
  38  git status -s # 간략히 보기(-s : short) (*자주사용하는 명령어*)
  39  git diff # working directory 에서 추적(tracked)인 파일의 변경사항 보기
