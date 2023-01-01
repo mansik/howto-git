@@ -1,21 +1,21 @@
 # howto-git-github
 
-* 참고사이트  
+#### 참고사이트  
 
 > [git docs](https://git-scm.com/docs)  
 > [git book](https://git-scm.com/book/ko/v2)  
 > github : new repogitory 생성시 나타나는 가이드  참고  
 
-* 동영상
+#### 동영상
 
 > [드림코딩-깃,깃허브 제대로 배우기](https://www.youtube.com/watch?v=Z9dvM7qgN9s&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=2&t=2511s)  
 > [코딩알려주는 누나](https://www.youtube.com/watch?v=lelVripbt2M&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=3)  
 
-* git GUI for windows/mac
+#### git GUI for windows/mac
 
 > [sourcetree](https://www.sourcetreeapp.com/)
 
-* 실습 사이트
+#### 실습 사이트
 
 > [githowto, 예제 및 차례대로 해 볼 수 있음](https://githowto.com/)  
 
