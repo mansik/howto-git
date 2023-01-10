@@ -8,8 +8,9 @@
 
 #### 동영상
 
-> [드림코딩-깃,깃허브 제대로 배우기](https://www.youtube.com/watch?v=Z9dvM7qgN9s&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=2&t=2511s)  
-> [코딩알려주는 누나](https://www.youtube.com/watch?v=lelVripbt2M&list=PLY07y-ahRhE-lFmKLdkgv5FcdIW6CCe9e&index=3)  
+> [드림코딩-깃,깃허브 제대로 배우기](https://youtu.be/Z9dvM7qgN9s)  
+> [코딩알려주는 누나](https://youtu.be/lelVripbt2M)  
+> [Git and GitHub for Beginners Tutorial](https://youtu.be/tRZGeaHPoaw)
 
 #### git GUI for windows/mac
 
