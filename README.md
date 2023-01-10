@@ -255,6 +255,10 @@ git push origin master
 git commit --amend -m "첫번째 커밋" # 마지막 commit message 변경
 git push -f origin master  # 원격저장소에 강제로  push 
 
+
+# 마지막 commit 에 수정된 파일 추가하기
+git add .
+git commit --amend
 ```
 
 # git branch 다루기 
