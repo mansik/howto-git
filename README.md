@@ -22,15 +22,15 @@
 
 #### 차례
 
-* git 용어
-* git 구조, 개념
+* git 용어[#git-용어]
+* git 구조, 개념[#git-구조,-개념]
   * github에 git push 할 경우 Authentication failed 오류 발생시 처리
-* git 설정
-* git 사용 방법 1 
+* git 설정[#git-설정]
+* git 사용 방법 1[#git-사용 방법-1]
   * git 사용 방법 정리
-* git 사용 방법 2 
-* git branch 다루기
-* git 원격 저장소 다루기 
+* git 사용 방법 2[#git-사용-방법-2] 
+* git branch 다루기[#git-branch-다루기]
+* git 원격 저장소 다루기[#git-원격-저장소-다루기]
 
 
 # git 용어
