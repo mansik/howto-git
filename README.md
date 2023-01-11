@@ -97,6 +97,7 @@ git status # show the working tree status
 
 # commit 후의 log 보기
 git log # show the commit logs
+git log --oneline 
 ```
 
 # git config 설정
@@ -108,7 +109,8 @@ git log # show the commit logs
 7  git config --global user.email "ms@gmail.com" # user.email setting, (*필수*)  
 10  git config --global core.autocrlf true # git 에 저장시 crlf(\r\n) -> lf(\n) 으로 변환, (윈도우, *필수*)
 10  git config --global core.autocrlf input # git 에 저장시 줄바꿈문자를 lf(\n) 으로 변환, (맥/리눅스, *필수*)
-    git config --global pull.rebase false  # pull 시에 충돌시 rebase 하지 않고 merge 하라
+
+    git config --global pull.rebase false  # pull 시에 충돌시 rebase 하지 않고 merge
 ```
 
 ```
@@ -262,7 +264,8 @@ git commit --amend -m "첫번째 커밋" # 마지막 commit message 변경
 git push -f origin master  # 원격저장소에 강제로  push 
 
 
-# 마지막 commit 에 수정된 파일 추가하기
+# 마지막 commit 에 수정된 파일 추가 및 commit message 변경하기
+git commit -m "initial commit" 
 git add .
 git commit --amend
 ```
