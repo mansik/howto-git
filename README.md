@@ -53,8 +53,8 @@
 * (untracked/tracked ) --- (cached/staged) --- (repository)                        
   * *(tracked : git add 한 파일은 git에서 추적 관리)*
 *             <------------------------------------------- clone : 원격저장소에서 복사해서 새로운 디렉토리로 가져오기    
-*                     add ->        commit ->       push ->       : 작업파일들을 원격저장소로 올리기
-*             <------------------------------------------- pull   : 원격저장소의 것을 가져오기 + 병합하기
+*                     add ->        commit ->       push ->       : 작업파일들을 원격저장소로 올리기(push)  
+*             <------------------------------------------- pull   : 원격저장소의 것을 가져오기(fetch) + 병합하기(merge)  
 
 
 ## github에 git push 할 경우 Authentication failed 오류 발생시 처리
