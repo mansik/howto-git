@@ -270,20 +270,25 @@ git add .
 git commit --amend
 ```
 
-# git branch 다루기 
+# git branch(분기) 다루기 
 
-> [브런치란 무엇인가](https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
+> [3.1 Git Branching - Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 
 ```
+# From Git version 2.23, git checkout 대신 git switch, git restore 을 사용할 수 있음.(git checkout의 기능을 분리 시켰음)
+
 git branch testing  # testing 이라는 새로운 브런치 생성(*자주사용하는 명령어*)
-git checkout iss53  # 다른 브런치(iss53)로 이동, 해당 브런치의 파일을 working directory로 복사(*자주사용하는 명령어*)
+git switch iss53  # 다른 브런치(iss53)로 이동, 해당 브런치의 파일을 working directory로 복사(*자주사용하는 명령어*)
+# git checkout iss53  # 다른 브런치(iss53)로 이동, 해당 브런치의 파일을 working directory로 복사(git checkout 대신 git switch 사용)
 echo "iss53 branch 에서 작업" > iss53.txt
 git commit -a -m 'finished the new footer [iss53]'
 .. iss53 브런치에서 작업 후 commit 후 
 git log --oneline --decorate --graph --all  # 현재 브랜치가 가리키고 있는 히스토리가 무엇이고 어떻게 갈라져 나왔는지 보여준다.
-git checkout master  # master 브런치로 이동
-git merge iss53  # ss53 브랜치를 master 브랜치에 Merge(합친다) , 다른 브랜치를 현재 Checkout된 브랜치에 Merge 하는 명령이다.
-git checkout -b newbranch  # newbranch 를 만들고 checkout 까지 한번에 함.(*자주사용하는 명령어*)
+git switch master  # master 브런치로 이동, git switch - # 이전 브런치로 이동
+# git checkout master  # master 브런치로 이동(git checkout 대신 git switch 사용)
+git merge iss53  # ss53 브랜치를 master 브랜치에 Merge(합친다) , 다른 브랜치를 현재 switch된 브랜치에 Merge 하는 명령이다.
+git switch -c newbranch  # newbranch 를 만들고 switch 까지 한번에 함.(*자주사용하는 명령어*)
+# git checkout -b newbranch  # newbranch 를 만들고 checkout 까지 한번에 함.(git checkout 대신 git switch 사용)
 ```
 
 # git 원격저장소 다루기
