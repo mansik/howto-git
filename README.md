@@ -9,7 +9,11 @@
 #### 동영상
 
 > [드림코딩-깃,깃허브 제대로 배우기](https://youtu.be/Z9dvM7qgN9s)  
-> [코딩알려주는 누나](https://youtu.be/lelVripbt2M)  
+> [코딩알려주는 누나](https://youtu.be/lelVripbt2M)
+> [생활코딩 github](https://youtube.com/playlist?list=PLuHgQVnccGMDWjb0TWItMCfDWDs8Y3Oo7)
+> [github pull request](https://youtube.com/playlist?list=PLuHgQVnccGMBXv1OKe3Hn3Jq6F735-uWm)
+> [Visual Studio Code 로 다루는 Git](https://youtube.com/playlist?list=PLuHgQVnccGMAQvSVKdXFiOo51HUD8iQQm)
+> [Visual Studio Code에서 Git으로 협업하](https://youtube.com/playlist?list=PLuHgQVnccGMD-XRW1zlqC7U2uCzOxyT8u)
 > [Git and GitHub for Beginners Tutorial](https://youtu.be/tRZGeaHPoaw)
 
 #### git GUI for windows/mac
