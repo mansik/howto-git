@@ -9,12 +9,12 @@
 #### 동영상
 
 > [드림코딩-깃,깃허브 제대로 배우기](https://youtu.be/Z9dvM7qgN9s)  
-> [코딩알려주는 누나](https://youtu.be/lelVripbt2M)
-> [생활코딩 github](https://youtube.com/playlist?list=PLuHgQVnccGMDWjb0TWItMCfDWDs8Y3Oo7)
-> [github pull request](https://youtube.com/playlist?list=PLuHgQVnccGMBXv1OKe3Hn3Jq6F735-uWm)
-> [Visual Studio Code 로 다루는 Git](https://youtube.com/playlist?list=PLuHgQVnccGMAQvSVKdXFiOo51HUD8iQQm)
-> [Visual Studio Code에서 Git으로 협업하](https://youtube.com/playlist?list=PLuHgQVnccGMD-XRW1zlqC7U2uCzOxyT8u)
-> [Git and GitHub for Beginners Tutorial](https://youtu.be/tRZGeaHPoaw)
+> [코딩알려주는 누나](https://youtu.be/lelVripbt2M)  
+> [생활코딩 github](https://youtube.com/playlist?list=PLuHgQVnccGMDWjb0TWItMCfDWDs8Y3Oo7)  
+> [github pull request](https://youtube.com/playlist?list=PLuHgQVnccGMBXv1OKe3Hn3Jq6F735-uWm)  
+> [Visual Studio Code 로 다루는 Git](https://youtube.com/playlist?list=PLuHgQVnccGMAQvSVKdXFiOo51HUD8iQQm)  
+> [Visual Studio Code에서 Git으로 협업하기](https://youtube.com/playlist?list=PLuHgQVnccGMD-XRW1zlqC7U2uCzOxyT8u)  
+> [Git and GitHub for Beginners Tutorial](https://youtu.be/tRZGeaHPoaw)  
 
 #### git GUI for windows/mac
 
@@ -108,6 +108,7 @@ git log # show the commit logs
 7  git config --global user.email "ms@gmail.com" # user.email setting, (*필수*)  
 10  git config --global core.autocrlf true # git 에 저장시 crlf(\r\n) -> lf(\n) 으로 변환, (윈도우, *필수*)
 10  git config --global core.autocrlf input # git 에 저장시 줄바꿈문자를 lf(\n) 으로 변환, (맥/리눅스, *필수*)
+    git config --global pull.rebase false  # pull 시에 충돌시 rebase 하지 않고 merge 하라
 ```
 
 ```
