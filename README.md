@@ -98,6 +98,9 @@ git status # show the working tree status
 # commit 후의 log 보기
 git log # show the commit logs
 git log --oneline 
+
+# 원격저장소 정보 보기
+git remote -v  # 원격 저장소명칭과 url을 보기
 ```
 
 # git config 설정
