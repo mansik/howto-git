@@ -148,7 +148,6 @@ git remote -v  # 원격 저장소명칭과 url을 보기
  35  echo .ipynb_checkpoints/ > .gitignore # .gitignore 파일에 git에 올리지 않는 파일 또는 디렉터리를 기록, git에 저장/추적 안됨
  
  14  git init # git 초기화, initialized empty repogitory (*필수*)
- 19  git init
  25  git add . # working directory의 모든파일(.)을 staging area 에 추가, 이후 부터 working directory의 파일이 수정될 때마다 변경사항 추적됨(tracked) (*필수*)
  26  git status #  working tree의 상태 보기 (*자주사용하는 명령어*)
  38  git status -s # 간략히 보기(-s : short) (*자주사용하는 명령어*)
@@ -182,13 +181,13 @@ git remote -v  # 원격 저장소명칭과 url을 보기
    20  git status # 현재 repogitory 의 상태 보기
    21  git config --global alias.st status # status 명령을 st로 alias(별칭) 를 만듬
    22  git st # git status 명령과 동일
-   23  git config --h # config 명령의 도움말
+   23  git config -h # config 명령의 도움말
    24  git status   
    25  git add . # working directory의 모든파일(.)을 staging area 에 추가, 이후 부터 working directory의 파일이 수정될 때마다 변경사항 추적됨(tracked) (*필수*)
    #   git add *.txt # *.txt 를 staging area에 추가
    26  git status
    27  git rm --cached .ipynb_checkpoints/ # staging area 에서 .ipynb_checkpoints/ 폴더 삭제, 하위 디렉터리에 파일이 있으면 삭제 안됨(-r 사용)
-   28  git rm --cached --h 
+   28  git rm --cached -h # 도움말 
    29  git rm --cached -r .ipynb_checkpoints/ # staging area에서 .ipynb_checkpoints/의 하위디렉터리 까지 삭제(-r), --cached / --staged 같음
    30  git status
    31  git rm --cached encoding.ipynb  # staging area에서 해당 파일 삭제, (-r : 하위디렉터리 까지 삭제)
@@ -217,7 +216,7 @@ git remote -v  # 원격 저장소명칭과 url을 보기
    53  git status -s
    54  git commit  -a -m "add readme.md and .gitignore" # -a -m : git add . 명령과 git commit -m "" 의 명령을 같이 실행하는 것과 같음.
    55  git status -s
-   56  git commit  -h
+   56  git commit  -h  # 도움말
    61  git add . # working directory 의 모든 파일을 staging area 로 이동
    62  git commit  -m "add readme.md and .gitignore" # commit message와 함께 commit
    63  git status -s
