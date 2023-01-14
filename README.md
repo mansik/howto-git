@@ -144,25 +144,26 @@ git remote -v  # 원격 저장소명칭과 url을 보기
 > 많이 사용하는 명령어
 
 ```
+> 로컬 저장소 작업
  35  echo .ipynb_checkpoints/ > .gitignore # .gitignore 파일에 git에 올리지 않는 파일 또는 디렉터리를 기록, git에 저장/추적 안됨
  
  14  git init # git 초기화, initialized empty repogitory (*필수*)
- 18  rm -rf .git # .git 폴더를 지우면 git을 사용안하는 상태로 됨
- 20  git status # working tree의 상태 보기
  19  git init
  25  git add . # working directory의 모든파일(.)을 staging area 에 추가, 이후 부터 working directory의 파일이 수정될 때마다 변경사항 추적됨(tracked) (*필수*)
  26  git status #  working tree의 상태 보기 (*자주사용하는 명령어*)
- 31  git rm --cached encoding.ipynb  # staging area에서 해당 파일 삭제, (-r : 하위디렉터리 까지 삭제)
  38  git status -s # 간략히 보기(-s : short) (*자주사용하는 명령어*)
  39  git diff # working directory 에서 추적(tracked)인 파일의 변경사항 보기
  40  git diff -staged # staging area의 변경사항 보기
  49  git commit -m "1-4 작업" # staging area의 파일을 git directory 로 이동, message의 내용으로 저장. (*필수*)
  50  git log # commit 한 히스토리 보기 (*필수*)
- 56  git commit  -h
- 64  git remote add origin https://github.com/mansik/python_project_20221226.git # 현재 프로젝트에 원격 repogitory 추가 (*필수*)
- 65  git remote # 원격 저장소 명칭 보기 (origin)
+     git checkout 5813bb5  # 5813bb5 커밋으로 코드를 되돌리기(working directory 의 파일이 해당 커밋으로 변경됨)
+     git checkout -  # 최신커밋으로 코드를 되돌리기     
+     
+ > 원격 저장소 작업  
+ 64  git remote add origin https://github.com/mansik/python_project_20221226.git # 현재 프로젝트에 원격 repogitory를 origin 이라는 이름으로 추가 (*필수*)
  66  git remote -v # 원격 저장소 세부 보기
- 67  git push -u origin master # origin(저장소), master(브런치), -u(git push 시 -u 옵션을 사용하면 이후에서 git push 시 origin, master 을 입력하지 않아도 된다.) (*필수*)
+ 67  git push -u origin master # origin(저장소), master(브런치), -u(git push 시 -u 옵션을 사용하면 이후에서 git push 시 origin, master 을 입력하지 않아도 된다. -u 는 생략가능) (*필수*)
+ 
  74  git add .
  76  git commit -m "add file"
  77  git push  # 위에서 git push -u 를 사용했으므로 여기서는 생략해도 위에 설정된 저장소, 브런치로 push 된다.
