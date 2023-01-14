@@ -6,6 +6,10 @@
 > [git book](https://git-scm.com/book/ko/v2) : 필수로 읽어야 함(한국어는 일부 명령어에 대한 설명이 빠져있는 경우 있음  
 > github : new repogitory 생성시 나타나는 가이드  참고  
 
+#### 책
+
+> 팀 개발을 위한 git, github 시작하기
+
 #### 동영상
 
 > [드림코딩-깃,깃허브 제대로 배우기](https://youtu.be/Z9dvM7qgN9s)  
