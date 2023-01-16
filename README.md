@@ -115,10 +115,11 @@ git remote -v  # 원격 저장소명칭과 url을 보기
 ```
 6  git config --global user.name "ms"  # user.name setting, (*필수*)
 7  git config --global user.email "ms@gmail.com" # user.email setting, (*필수*)  
-10  git config --global core.autocrlf true # git 에 저장시 crlf(\r\n) -> lf(\n) 으로 변환, (윈도우, git 설치시 옵션에서 선택되므로 설정할 필요 없음)
+
+10  git config --global core.autocrlf true # git 에 저장시 crlf(\r\n) -> lf(\n) 으로 변환, (윈도우에서는 설치시 옵션에서 선택되므로 설정할 필요 없음)
 10  git config --global core.autocrlf input # git 에 저장시 줄바꿈문자를 lf(\n) 으로 변환, (맥/리눅스, *필수*)
 
-    git config --global pull.rebase false  # pull 시에 충돌시 rebase 하지 않고 merge
+    git config --global pull.rebase false  # pull 시에 충돌시 rebase 하지 않고 merge  (윈도우에서는 설치시 옵션에서 선택되므로 설정할 필요 없음)
     git config --list
 ```
 
@@ -133,10 +134,17 @@ git remote -v  # 원격 저장소명칭과 url을 보기
  8  git config user.name # 보기  
  9  git config user.email # 보기  
  11  git config core.autocrlf # 보기
- 10  git config --global core.autocrlf true # git 에 저장시 crlf(\r\n) -> lf(\n) 으로 변환, (윈도우, git 설치시 옵션에서 선택되므로 설정할 필요 없음)
+ 10  git config --global core.autocrlf true # git 에 저장시 crlf(\r\n) -> lf(\n) 으로 변환, (윈도우에서는 설치시 옵션에서 선택되므로 설정할 필요 없음)
  10  git config --global core.autocrlf input # git 에 저장시 줄바꿈문자를 lf(\n) 으로 변환, (맥/리눅스, *필수*)
  11  git config core.autocrlf # 보기  
- 12  git config --list  
+ 12  git config --list   # 전체 옵션값 보기
+ 
+ # 옵션값 보기 (우선순위 local > global > system)
+     git config core.name # core.name 의 옵션값 보기
+     git config --list   # 전체 옵션값 보기
+     git config --local --list  # 현재 저장소의 옵션값 보기
+     git config --global --list  # 현재 사용자의 옵션값 보기
+     git config --system --list  # 시스템의 옵션값 보기     
 ```
 
 # git 사용 방법 1
