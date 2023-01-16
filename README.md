@@ -34,6 +34,8 @@
 * [git 용어](#git-용어)
 * [git 구조, 개념](#git-구조,-개념)
   * github에 git push 할 경우 Authentication failed 오류 발생시 처리
+* [명령어](#명령어)
+* [상태를 확인 하기 위해 사용하는 명령어](#상태를-확인-하기-위해-사용하는-명령어)
 * [git 설정](#git-설정)
 * [git 사용 방법 1](#git-사용-방법-1)
   * git 사용 방법 정리
@@ -50,16 +52,12 @@
 * repogitory :git directory(저장소) : 소스의 변경사항 히스토리가 저장되는 장소
 * branch(브런치) : 개발을 하다 보면 코드를 여러 개로 복사해야 하는 일이 자주 생긴다. 코드를 통째로 복사하고 나서 원래 코드와는 상관없이 독립적으로 개발을 진행할 수 있는데, 이렇게 독립적으로 개발하는 것이 브랜치다.
 
-
 # git 구조, 개념
 
 - working directory(=working tree) : 소스가 있는 폴더, .git 폴더는 제외한 부분
 - local repository : 로컬 저장소, .git 폴더(커밋, 커밋을 구성하는 객체, 스테이지)
 - remote repository : 원격 저장소
 - 파일의 상태 : untracked - tracked(unmodified/modified/staged(=cached))
-- 명령어 : config, init, add, commit, push, pull, fetch, merge, clone, branch, checkout(=switch, restore)
-- rebase, cherry-pick, reset, revert, stash
-- status, log, remote
 
 ---
 * `-----------------------로컬-------------------------------------------|---원격`
@@ -94,6 +92,11 @@
   * Repository permissions  
     * Contents  (Repository contents, commits, branches, downloads, releases, and merges.)  
 
+# 명령어 
+- config, init, add, commit, remote, push, pull, fetch, merge, clone, branch, checkout(=switch, restore)
+- status, log
+- rebase, cherry-pick, reset, revert, stash
+- help
 
 # git 도움말 보기
 
