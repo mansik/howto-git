@@ -52,14 +52,14 @@
 
 # git 구조, 개념
 
-* `-----------------------------로컬-----------------------|---원격`
-* `working directory`  --- `staging area`  --- `git directory`  --- `github`
-* (untracked/tracked ) --- (staged(cached)) --- (repository)                        
-  * *(tracked : git add 한 파일은 git에서 추적 관리, unmodified/modified)*
-*             <------------------------------------------- clone : 원격저장소에서 복사해서 새로운 디렉토리로 가져오기    
-*                     add ->        commit ->       push ->       : 작업파일들을 원격저장소로 올리기(push)  
-*             <------------------------------------------- pull   : 원격저장소의 정보 가져오기(fetch) + 병합하기(merge)  
-*                                                    <---- fetch  : 원격저장소의 정보(이력)만 가져온다. 코드는 안가져온다.
+* `-----------------------로컬-------------------------------------------|---원격`
+* `working directory(=working tree)` --- `staging area` --- `git directory` --- `github`
+* (untracked/tracked ) --------------- (staged(=cached)) --- (local repository) --- (remote repository)
+* (tracked : git add 한 파일은 git에서 추적 관리, unmodified/modified)
+*           <------------------------------------------------------------ clone : 원격저장소에서 복사해서 새로운 디렉토리로 가져오기    
+*                                   add ->          commit ->        push ->    : 작업파일들을 원격저장소로 올리기(push)  
+*           <------------------------------------------------------------ pull  : 원격저장소의 정보 가져오기(fetch) + 병합하기(merge)  
+*                                                                  <---- fetch  : 원격저장소의 정보(이력)만 가져온다. 코드는 안가져온다.
 
 
 ## github에 git push 할 경우 Authentication failed 오류 발생시 처리
