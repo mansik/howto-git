@@ -40,6 +40,7 @@
 * [git 사용 방법 2](#git-사용-방법-2)
 * [git branch 다루기](#git-branch-다루기)
 * [git 원격 저장소 다루기](#git-원격-저장소-다루기)
+* [좋은 커밋 메지지 7가지 규칙](https://jane-aeiou.tistory.com/93)
 
 
 # git 용어
