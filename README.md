@@ -53,15 +53,24 @@
 
 # git 구조, 개념
 
+- working directory(=working tree) : 소스가 있는 폴더, .git 폴더는 제외한 부분
+- local repository : 로컬 저장소, .git 폴더(커밋, 커밋을 구성하는 객체, 스테이지)
+- remote repository : 원격 저장소
+- 파일의 상태 : untracked - tracked(unmodified/modified/staged(=cached))
+- 명령어 : config, init, add, commit, push, pull, fetch, merge, clone, branch, checkout(=switch, restore)
+- rebase, cherry-pick, reset, revert, stash
+- status, log, remote
+
+---
 * `-----------------------로컬-------------------------------------------|---원격`
 * `working directory(=working tree)` --- `staging area` --- `git directory` --- `github`
-* (untracked/tracked ) --------------- (staged(=cached)) --- (local repository) --- (remote repository)
-* (tracked : git add 한 파일은 git에서 추적 관리, unmodified/modified)
+* (untracked/unmodified/modified) --- (staged(=cached)) --- (local repository) --- (remote repository)
+* (tracked : git add 한 파일은 git에서 추적 관리, unmodified/modified/staged)
 *           <------------------------------------------------------------ clone : 원격저장소에서 복사해서 새로운 디렉토리로 가져오기    
 *                                   add ->          commit ->        push ->    : 작업파일들을 원격저장소로 올리기(push)  
 *           <------------------------------------------------------------ pull  : 원격저장소의 정보 가져오기(fetch) + 병합하기(merge)  
 *                                                                  <---- fetch  : 원격저장소의 정보(이력)만 가져온다. 코드는 안가져온다.
-
+---
 
 ## github에 git push 할 경우 Authentication failed 오류 발생시 처리
 
@@ -98,7 +107,12 @@ git add -h # add 명령어에 대한 간략 도움말(-h, --help)
 # 상태를 확인 하기 위해 사용하는 명령어
 
 ```
-# it status 명령어는 각 상태에 맞는 명령어 사용법도 보여주므로 참고 하면 된다.
+# git 설정(옵션) 보기
+git config core.name  # core.name 의 설정 보기
+git config --list  # 전체 옵션값 보기
+git config --global --list  # 현재 사용자의 옵션값 보기
+
+# git status 명령어는 각 상태에 맞는 명령어 사용법도 보여주므로 참고 하면 된다.
 git status # show the working tree status
 
 # commit 후의 log 보기
@@ -107,6 +121,11 @@ git log --oneline
 
 # 원격저장소 정보 보기
 git remote -v  # 원격 저장소명칭과 url을 보기
+
+# 브런치 정보 보기
+git branch  # 로컬 저장소의 브런치 보기
+git branch -v # 로컬 저장소의 브런치 보기 + 마지막 커밋 보기
+git branch -rv # 원격 저장소의 브런치 보기 + 마지막 커밋 보기
 ```
 
 # git config 설정
