@@ -172,7 +172,7 @@ git remote -v  # 원격 저장소명칭과 url을 보기
  > 원격 저장소 작업  
  64  git remote add origin https://github.com/mansik/python_project_20221226.git # 현재 프로젝트에 원격 repogitory를 origin 이라는 이름으로 추가 (*필수*)
  66  git remote -v # 원격 저장소 세부 보기
- 67  git push -u origin master # origin(저장소), master(브런치), -u(git push 시 -u 옵션을 사용하면 이후에서 git push 시 origin, master 을 입력하지 않아도 된다. -u 는 생략가능) (*필수*)
+ 67  git push -u origin master # origin(저장소), master(브런치), -u(set upstream, 이후에서 git push 시 origin, master 을 입력하지 않아도 된다. -u 는 생략가능) (*필수*)
  
  74  git add .
  76  git commit -m "add file"
@@ -234,7 +234,7 @@ git remote -v  # 원격 저장소명칭과 url을 보기
    64  git remote add origin https://github.com/mansik/python_project_20221226.git # 현재 프로젝트에 원격 repogitory 추가 (*자주사용하는 명령어*)
    65  git remote # 원격 저장소 명칭 보기 (origin)
    66  git remote -v # 원격 저장소 세부 보기
-   67  git push -u origin master # origin(저장소), master(브런치), -u(git push 시 -u 옵션을 사용하면 이후 git push 시 origin, master 을 입력하지 않아도 된다.) (*필수*)
+   67  git push -u origin master # origin(저장소), master(브런치), -u(set upstream, 이후에서 git push 시 origin, master 을 입력하지 않아도 된다. -u 는 생략가능) (*필수*)
    68  git remote -v
    69  git remote    
    71  echo "add file" > add.txt
