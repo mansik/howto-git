@@ -3,7 +3,7 @@
 #### 참고사이트  
 
 > [git docs](https://git-scm.com/docs)  
-> [git book](https://git-scm.com/book/ko/v2) : 필수로 읽어야 함(한국어는 일부 명령어에 대한 설명이 빠져있는 경우 있음  
+> [git book](https://git-scm.com/book/ko/v2) : 필수로 읽어야 함(한국어는 일부 명령어에 대한 설명이 빠져있는 경우 있음)  
 > github : new repogitory 생성시 나타나는 가이드  참고  
 
 #### 책
@@ -27,7 +27,7 @@
 #### 실습 사이트
 
 > [githowto, 예제 및 차례대로 해 볼 수 있음](https://githowto.com/)  
-
+> [git branching 실습](https://learngitbranching.js.org/)
 
 #### 차례
 
