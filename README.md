@@ -290,10 +290,11 @@ git push origin master
 
 ```
 git clone https://github.com/mansik/test.git my-test # my-test 폴더로 원격저장소를 다운받아서 사용
+cd my-test
 또는
-cd my-test
-git clone https://github.com/mansik/test.git # my-test 폴더로 원격저장소를 다운받아서 사용
-cd my-test
+git clone https://github.com/mansik/test.git # test 폴더로 원격저장소를 다운받아서 사용
+cd test
+
 git add README.md
 git commit -m "first commit"
 git push origin master
